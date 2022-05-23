@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\2 - Application\ORG.TicketService.Application\ORG.TicketService.Application.csproj" />
+    <ProjectReference Include="..\..\4 - Infrastructure\ORG.TicketService.Bootstrap\ORG.TicketService.Bootstrap.csproj" />
+  </ItemGroup>
+
+</Project>

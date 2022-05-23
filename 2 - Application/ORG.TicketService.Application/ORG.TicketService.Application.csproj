@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Class1.cs" />
+    <Compile Remove="Queries\GetTicketQueryResult.cs" />
+    <Compile Remove="Commands\ResponseBase.cs" />
+    <Compile Remove="Commands\ListTickets\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="11.0.1" />
+    <PackageReference Include="FluentValidation.AspNetCore" Version="11.0.1" />
+    <PackageReference Include="MassTransit" Version="8.0.2" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="10.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\3 - Domain\ORG.TicketService.Domain\ORG.TicketService.Domain.csproj" />
+    <ProjectReference Include="..\..\4 - Infrastructure\ORG.TicketService.Notification\ORG.TicketService.Notification.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Remove="Commands\ListTickets\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Commands\ListTickets\**" />
+  </ItemGroup>
+
+</Project>
